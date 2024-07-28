@@ -6,6 +6,9 @@
 # User-generated files
 # **/*.Generated/
 
+# appsettings files
+**/*appsettings.*.json
+
 # User-specific files
 *.rsuser
 *.suo
