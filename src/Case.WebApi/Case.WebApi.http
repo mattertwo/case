@@ -1,0 +1,6 @@
+@Case.WebApi_HostAddress = http://localhost:5296
+
+GET {{Case.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
