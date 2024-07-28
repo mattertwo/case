@@ -1,9 +1,11 @@
+using Case.Core.DependencyInjection;
 using Case.Infrastructure.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseInfrastructureHostBuilders();
 
+builder.Services.AddCoreServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 
 builder.Services.AddControllers();
