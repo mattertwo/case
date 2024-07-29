@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case.WebApp", "src\Case.WebApp\Case.WebApp.csproj", "{2301F05A-7535-4B1D-9F0B-F4D91B2F81A5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case.WebApi", "src\Case.WebApi\Case.WebApi.csproj", "{975B17A1-6029-47E3-8EF7-4770689DFCBA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case.Infrastructure", "src\Case.Infrastructure\Case.Infrastructure.csproj", "{A37BB01A-A4D2-4461-8DBC-B2E12A1FA542}"
@@ -14,8 +12,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2301F05A-7535-4B1D-9F0B-F4D91B2F81A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2301F05A-7535-4B1D-9F0B-F4D91B2F81A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{975B17A1-6029-47E3-8EF7-4770689DFCBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{975B17A1-6029-47E3-8EF7-4770689DFCBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{975B17A1-6029-47E3-8EF7-4770689DFCBA}.Release|Any CPU.ActiveCfg = Release|Any CPU

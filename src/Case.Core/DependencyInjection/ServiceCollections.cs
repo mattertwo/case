@@ -16,6 +16,8 @@ public static class ServiceCollections
     private static IServiceCollection AddServices(this IServiceCollection services)
     {
         services.AddScoped<IMatterService, MatterService>();
+        services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IWorkTypeService, WorkTypeService>();
 
         return services;
     }
