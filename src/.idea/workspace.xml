@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61d2e2d7-5627-4bab-9989-a5b6fda23b78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Case.Core/Services/IUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Case.Core/Services/IWorkTypeService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Case.Core/Services/UserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Case.Core/Services/WorkTypeService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Case.WebApi/Controllers/UserController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Case.WebApi/Controllers/WorkTypeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Case.WebApp/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Case.WebApp/.idea/Case.WebApp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Case.WebApp/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Case.WebApp/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Case.WebApp/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../case.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Case.Core/DependencyInjection/ServiceCollections.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Case.Core/DependencyInjection/ServiceCollections.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Case.Infrastructure/Persistence/Entities/Matter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Case.Infrastructure/Persistence/Entities/Matter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Case.WebApi/Case.WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Case.WebApi/Case.WebApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Case.WebApi/Case.WebApi.http" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Case.WebApi/Controllers/MatterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Case.WebApi/Controllers/MatterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Case.WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Case.WebApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Case.WebApp/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Case.WebApp/app/page.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="61d2e2d7-5627-4bab-9989-a5b6fda23b78" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
