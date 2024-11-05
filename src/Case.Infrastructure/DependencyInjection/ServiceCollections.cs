@@ -34,6 +34,9 @@ public static class ServiceCollections
                 case "Sqlite":
                     optionsBuilder.UseSqlite(connectionString);
                     break;
+                case "PostgreSql":
+                    optionsBuilder.UseNpgsql(connectionString);
+                    break;
                 default:
                     throw new InvalidOperationException("Invalid database provider");
             }

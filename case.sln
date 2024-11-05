@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case.Persistence.SqlServer"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case.Persistence.Sqlite", "src\Case.Persistence.Sqlite\Case.Persistence.Sqlite.csproj", "{5910D27D-127A-47C0-8C75-C0ECD7531C72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case.Persistence.PostgreSql", "src\Case.Persistence.PostgreSql\Case.Persistence.PostgreSql.csproj", "{D78C8BEE-C2CE-4D81-A57C-28F8E1B92B68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{5910D27D-127A-47C0-8C75-C0ECD7531C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5910D27D-127A-47C0-8C75-C0ECD7531C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5910D27D-127A-47C0-8C75-C0ECD7531C72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D78C8BEE-C2CE-4D81-A57C-28F8E1B92B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78C8BEE-C2CE-4D81-A57C-28F8E1B92B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78C8BEE-C2CE-4D81-A57C-28F8E1B92B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78C8BEE-C2CE-4D81-A57C-28F8E1B92B68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
