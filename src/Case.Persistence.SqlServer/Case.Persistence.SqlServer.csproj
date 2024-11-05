@@ -7,4 +7,8 @@
         <RootNamespace>Case.Persistence.EFCore.SqlServer</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Migrations\" />
+    </ItemGroup>
+
 </Project>

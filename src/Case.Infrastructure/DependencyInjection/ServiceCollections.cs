@@ -21,10 +21,22 @@ public static class ServiceCollections
     {
         services.AddDbContext<CaseDbContext>(optionsBuilder =>
         {
-            var connectionString = configuration.GetConnectionString("CaseDb")
+            var connectionString = configuration.GetConnectionString("AppDb")
                                    ?? throw new InvalidOperationException("Could not get database connection string");
 
-            optionsBuilder.UseSqlServer(connectionString);
+            var dbProvider = configuration.GetValue<string>("DbProvider");
+            
+            switch (dbProvider)
+            {
+                case "SqlServer":
+                    optionsBuilder.UseSqlServer(connectionString);
+                    break;
+                case "Sqlite":
+                    optionsBuilder.UseSqlite(connectionString);
+                    break;
+                default:
+                    throw new InvalidOperationException("Invalid database provider");
+            }
         });
 
         // services.AddScoped<IEngageRequestDocumentRepository, EngageRequestDocumentRepository>();
