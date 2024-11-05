@@ -1,8 +1,8 @@
-using Case.Infrastructure.Persistence.Entities;
+using Case.Persistence.EFCore.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Case.Infrastructure.Persistence.EntityTypeConfigurations;
+namespace Case.Persistence.EFCore.EntityTypeConfigurations;
 
 public class WorkTypeEntityTypeConfiguration : IEntityTypeConfiguration<WorkType>
 {

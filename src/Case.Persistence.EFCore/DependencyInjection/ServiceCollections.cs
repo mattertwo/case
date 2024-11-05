@@ -1,8 +1,9 @@
 using Case.Persistence.EFCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Case.Infrastructure.DependencyInjection;
+namespace Case.Persistence.EFCore.DependencyInjection;
 
 public static class ServiceCollections
 {

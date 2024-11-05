@@ -1,17 +1,20 @@
 using System.Reflection;
-using Case.Infrastructure.Persistence.Entities;
+using Case.Persistence.EFCore.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Case.Infrastructure.Persistence;
+namespace Case.Persistence.EFCore;
 
 public class CaseDbContext(DbContextOptions<CaseDbContext> options) : DbContext(options)
 {
     public DbSet<Matter> Matters { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<WorkType> WorkTypes { get; set; }
-    
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetAssembly(typeof(CaseDbContext)) ??
+                                                     Assembly.GetExecutingAssembly());
     }
 }
