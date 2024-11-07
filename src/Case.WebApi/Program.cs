@@ -1,5 +1,5 @@
 using Case.Core.Extensions;
-using Case.Infrastructure.DependencyInjection;
+using Case.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
