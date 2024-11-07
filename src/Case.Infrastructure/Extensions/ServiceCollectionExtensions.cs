@@ -7,7 +7,7 @@ using Case.Persistence.EFCore.SqlServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Case.Infrastructure.DependencyInjection;
+namespace Case.Infrastructure.Extensions;
 
 public static class ServiceCollectionExtensions
 {

@@ -1,9 +1,9 @@
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace Case.Infrastructure.DependencyInjection;
+namespace Case.Infrastructure.Extensions;
 
-public static class HostBuilder
+public static class HostBuilderExtensions
 {
     public static IHostBuilder UseInfrastructureHostBuilders(this IHostBuilder builder)
     {
