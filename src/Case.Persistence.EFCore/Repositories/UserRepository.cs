@@ -1,10 +1,10 @@
-using Case.Infrastructure.Persistence;
 using Case.Core.Models;
+using Case.Core.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace Case.Core.Services;
+namespace Case.Persistence.EFCore.Repositories;
 
-public class UserRepository(CaseDbContext dbContext) : IUserService
+public class UserRepository(CaseDbContext dbContext) : IUserRepository
 {
     public Task<List<User>> GetAllAsync()
     {

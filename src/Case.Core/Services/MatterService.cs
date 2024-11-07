@@ -1,13 +1,13 @@
-using Case.Infrastructure.Persistence;
 using Case.Core.Models;
-using Microsoft.EntityFrameworkCore;
+using Case.Core.Repositories;
 
-namespace Case.Core.Services;
-
-public class MatterService(CaseDbContext dbContext) : IMatterService
+namespace Case.Core.Services
 {
-    public Task<List<Matter>> GetAllAsync()
+    public class MatterService(IMatterRepository matterRepository) : IMatterService
     {
-        return dbContext.Matters.ToListAsync();
+        public async Task<List<Matter>> GetAllAsync()
+        {
+            return await matterRepository.GetAllAsync();
+        }
     }
 }

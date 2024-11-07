@@ -1,4 +1,8 @@
+using Case.Core.Repositories;
 using Case.Persistence.EFCore;
+using Case.Persistence.EFCore.PostgreSql;
+using Case.Persistence.EFCore.Repositories;
+using Case.Persistence.EFCore.Sqlite;
 using Case.Persistence.EFCore.SqlServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +31,12 @@ public static class ServiceCollectionExtensions
             case "SqlServer":
                 services.AddSingleton<IDbProviderConfigurator, SqlServerDbProviderConfigurator>();
                 break;
+            case "Sqlite":
+                services.AddSingleton<IDbProviderConfigurator, SqliteDbProviderConfigurator>();
+                break;
+            case "PostgreSql":
+                services.AddSingleton<IDbProviderConfigurator, PostgreSqlDbProviderConfigurator>();
+                break;
             default:
                 throw new InvalidDataException($"The provider {providerName} is not supported.");
         }
@@ -39,9 +49,9 @@ public static class ServiceCollectionExtensions
         });
         
         // Register other repositories here, e.g.,
-        // services.AddScoped<IEngageRequestDocumentRepository, EngageRequestDocumentRepository>();
-        // services.AddScoped<IMatterRepository, MatterRepository>();
-        // services.AddScoped<IVolumeRepository, VolumeRepository>();
+        services.AddScoped<IMatterRepository, MatterRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IWorkTypeRepository, WorkTypeRepository>();
 
         return services;
     }

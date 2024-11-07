@@ -1,10 +1,10 @@
-using Case.Infrastructure.Persistence;
 using Case.Core.Models;
+using Case.Core.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace Case.Core.Services;
+namespace Case.Persistence.EFCore.Repositories;
 
-public class WorkTypeRepository(CaseDbContext dbContext) : IWorkTypeService
+public class WorkTypeRepository(CaseDbContext dbContext) : IWorkTypeRepository
 {
     public Task<List<WorkType>> GetAllAsync()
     {
