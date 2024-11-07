@@ -1,6 +1,8 @@
 using Case.Persistence.EFCore;
+using Case.Persistence.EFCore.SqlServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 
 namespace Case.Infrastructure.DependencyInjection;
 
@@ -9,6 +11,7 @@ public static class ServiceCollections
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services,
         IConfiguration configuration)
     {
+        services.AddScoped<SqlServerProviderSetup>();  // Register SqlServerProviderSetup
         services.AddPersistence(configuration);
         services.AddServices();
 
@@ -17,17 +20,18 @@ public static class ServiceCollections
 
     private static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<CaseDbContext>(optionsBuilder =>
+        services.AddDbContext<CaseDbContext>((serviceProvider, optionsBuilder) =>
         {
             var connectionString = configuration.GetConnectionString("AppDb")
                                    ?? throw new InvalidOperationException("Could not get database connection string");
 
             var dbProvider = configuration.GetValue<string>("DbProvider");
-            
+
             switch (dbProvider)
             {
                 case "SqlServer":
-                    optionsBuilder.UseSqlServer(connectionString);
+                    var sqlServerSetup = serviceProvider.GetRequiredService<SqlServerProviderSetup>();
+                    sqlServerSetup.Setup(optionsBuilder, connectionString);
                     break;
                 case "Sqlite":
                     optionsBuilder.UseSqlite(connectionString);
@@ -40,6 +44,7 @@ public static class ServiceCollections
             }
         });
 
+        // Register other repositories here, e.g.,
         // services.AddScoped<IEngageRequestDocumentRepository, EngageRequestDocumentRepository>();
         // services.AddScoped<IMatterRepository, MatterRepository>();
         // services.AddScoped<IVolumeRepository, VolumeRepository>();
@@ -49,6 +54,7 @@ public static class ServiceCollections
 
     private static IServiceCollection AddServices(this IServiceCollection services)
     {
+        // Register any additional services here
         return services;
     }
 }

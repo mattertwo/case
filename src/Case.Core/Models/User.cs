@@ -1,4 +1,4 @@
-namespace Case.Persistence.EFCore.Entities;
+namespace Case.Core.Models;
 
 public class User
 {

@@ -1,6 +1,6 @@
-using System.Reflection;
-using Case.Persistence.EFCore.Entities;
+using Case.Core.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace Case.Persistence.EFCore;
 
