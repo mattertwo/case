@@ -1,4 +1,4 @@
-using Case.Infrastructure.Persistence.Entities;
+using Case.Core.Models;
 
 namespace Case.Core.Services;
 

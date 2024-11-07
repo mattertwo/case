@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Case.Core.Services;
 
-public class WorkTypeService(CaseDbContext dbContext) : IWorkTypeService
+public class WorkTypeRepository(CaseDbContext dbContext) : IWorkTypeService
 {
     public Task<List<WorkType>> GetAllAsync()
     {

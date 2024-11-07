@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Case.Core.Services;
 
-public class MatterService(CaseDbContext dbContext) : IMatterService
+public class MatterRepository(CaseDbContext dbContext) : IMatterService
 {
     public Task<List<Matter>> GetAllAsync()
     {
