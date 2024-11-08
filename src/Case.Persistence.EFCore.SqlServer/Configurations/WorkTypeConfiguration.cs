@@ -8,13 +8,13 @@ public class WorkTypeConfiguration : IEntityTypeConfiguration<WorkType>
 {
     public void Configure(EntityTypeBuilder<WorkType> builder)
     {
+        builder.HasKey(e => e.Id);
+        
         builder
             .Property(e => e.Id)
             .IsRequired();
         builder
             .Property(e => e.Name)
             .IsRequired();
-        
-        builder.HasKey(e => e.Id);
     }
 }

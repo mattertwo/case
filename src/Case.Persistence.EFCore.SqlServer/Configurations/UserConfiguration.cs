@@ -10,28 +10,29 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
     {
         builder.HasKey(u => u.Id);
 
-        builder.HasIndex(u => u.Email)
+        builder
+            .HasIndex(u => u.Email)
             .IsUnique();
 
-        // Configure relationships
-        builder.HasMany(u => u.Credentials)
+        builder
+            .Property(u => u.TimeZone)
+            .HasDefaultValue("Europe/London");
+        builder
+            .Property(u => u.TwoFactorEnabled)
+            .HasDefaultValue(false);
+        builder
+            .Property(u => u.CreatedAt)
+            .HasDefaultValue(DateTime.UtcNow);
+
+        builder
+            .HasMany(u => u.Credentials)
             .WithOne(c => c.User)
             .HasForeignKey(c => c.UserId)
             .OnDelete(DeleteBehavior.Cascade);
-        
-        builder.HasOne(u => u.Password)
+        builder
+            .HasOne(u => u.Password)
             .WithOne(p => p.User)
             .HasForeignKey<UserPassword>(p => p.UserId)
             .OnDelete(DeleteBehavior.Cascade);
-
-        // Configure default values
-        builder.Property(u => u.TimeZone)
-            .HasDefaultValue("Europe/London");
-        
-        builder.Property(u => u.TwoFactorEnabled)
-            .HasDefaultValue(false);
-        
-        builder.Property(u => u.CreatedAt)
-            .HasDefaultValue(DateTime.UtcNow);
     }
 }

@@ -10,15 +10,15 @@ public class UserPasswordConfiguration : IEntityTypeConfiguration<UserPassword>
     {
         builder.HasKey(p => p.Id);
 
-        // Configure one-to-one relationship with User
-        builder.HasOne(p => p.User)
+        builder
+            .Property(p => p.Hash)
+            .IsRequired()
+            .HasMaxLength(64);
+        
+        builder
+            .HasOne(p => p.User)
             .WithOne(u => u.Password)
             .HasForeignKey<UserPassword>(p => p.UserId)
             .OnDelete(DeleteBehavior.Cascade);
-
-        // Password hash storage configuration
-        builder.Property(p => p.Hash)
-            .IsRequired()
-            .HasMaxLength(64); // Example max length for a SHA-512 hash
     }
 }
