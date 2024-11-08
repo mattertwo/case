@@ -10,4 +10,15 @@ public class UserRepository(CaseDbContext dbContext) : IUserRepository
     {
         return dbContext.Users.ToListAsync();
     }
+    
+    public async Task<User> GetUserByIdAsync(string id)
+    {
+        return await dbContext.Users.FindAsync(id);
+    }
+
+    public async Task CreateUserAsync(User user)
+    {
+        dbContext.Users.Add(user);
+        await dbContext.SaveChangesAsync();
+    }
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { AuthenticatedTemplate, MsalProvider, UnauthenticatedTemplate, useMsal } from "@azure/msal-react";
-import { msalInstance } from "@/msal/msal";
+import { msalInstance } from "@/msal/auth-config";
 
 const SignInButton = () => {
     const { instance } = useMsal();

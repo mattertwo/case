@@ -12,8 +12,6 @@
     </ItemGroup>
     
     <ItemGroup>
-      <ProjectReference Include="..\Case.Persistence.EFCore.PostgreSql\Case.Persistence.EFCore.PostgreSql.csproj" />
-      <ProjectReference Include="..\Case.Persistence.EFCore.Sqlite\Case.Persistence.EFCore.Sqlite.csproj" />
       <ProjectReference Include="..\Case.Persistence.EFCore.SqlServer\Case.Persistence.EFCore.SqlServer.csproj" />
     </ItemGroup>
 

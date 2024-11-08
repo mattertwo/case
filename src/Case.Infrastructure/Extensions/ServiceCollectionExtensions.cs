@@ -1,8 +1,6 @@
 using Case.Core.Repositories;
 using Case.Persistence.EFCore;
-using Case.Persistence.EFCore.PostgreSql;
 using Case.Persistence.EFCore.Repositories;
-using Case.Persistence.EFCore.Sqlite;
 using Case.Persistence.EFCore.SqlServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,12 +28,6 @@ public static class ServiceCollectionExtensions
         {
             case "SqlServer":
                 services.AddSingleton<IDbProviderConfigurator, SqlServerDbProviderConfigurator>();
-                break;
-            case "Sqlite":
-                services.AddSingleton<IDbProviderConfigurator, SqliteDbProviderConfigurator>();
-                break;
-            case "PostgreSql":
-                services.AddSingleton<IDbProviderConfigurator, PostgreSqlDbProviderConfigurator>();
                 break;
             default:
                 throw new InvalidDataException($"The provider {providerName} is not supported.");

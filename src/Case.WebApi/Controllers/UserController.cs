@@ -1,10 +1,14 @@
 using Case.Core.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
+using Case.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Case.WebApi.Controllers;
 
 [ApiController]
 [Route("users")]
+[Authorize]
 public class UserController(IUserService userService) : ControllerBase
 {
     [HttpGet]

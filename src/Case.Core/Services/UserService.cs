@@ -9,5 +9,15 @@ namespace Case.Core.Services
         {
             return await userRepository.GetAllAsync();
         }
+        
+        public async Task<User> GetUserByIdAsync(string id)
+        {
+            return await userRepository.GetUserByIdAsync(id);
+        }
+
+        public async Task CreateUserAsync(User user)
+        {
+            await userRepository.CreateUserAsync(user);
+        }
     }
 }

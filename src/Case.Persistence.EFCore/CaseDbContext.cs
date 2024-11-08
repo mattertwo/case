@@ -8,6 +8,8 @@ public class CaseDbContext(DbContextOptions<CaseDbContext> options) : DbContext(
 {
     public DbSet<Matter> Matters { get; set; }
     public DbSet<User> Users { get; set; }
+    public DbSet<UserCredential> UserCredentials { get; set; }
+    public DbSet<UserPassword> UserPasswords { get; set; }
     public DbSet<WorkType> WorkTypes { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

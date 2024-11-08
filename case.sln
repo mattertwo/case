@@ -8,10 +8,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case.Core", "src\Case.Core\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case.Persistence.EFCore.SqlServer", "src\Case.Persistence.EFCore.SqlServer\Case.Persistence.EFCore.SqlServer.csproj", "{90139651-4E6F-4E92-877D-8EEF87270B0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case.Persistence.EFCore.Sqlite", "src\Case.Persistence.EFCore.Sqlite\Case.Persistence.EFCore.Sqlite.csproj", "{5910D27D-127A-47C0-8C75-C0ECD7531C72}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case.Persistence.EFCore.PostgreSql", "src\Case.Persistence.EFCore.PostgreSql\Case.Persistence.EFCore.PostgreSql.csproj", "{D78C8BEE-C2CE-4D81-A57C-28F8E1B92B68}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case.Persistence.EFCore", "src\Case.Persistence.EFCore\Case.Persistence.EFCore.csproj", "{4FBB72C5-304A-4E15-82E3-38FDCD2F9F96}"
 EndProject
 Global
@@ -36,14 +32,6 @@ Global
 		{90139651-4E6F-4E92-877D-8EEF87270B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90139651-4E6F-4E92-877D-8EEF87270B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90139651-4E6F-4E92-877D-8EEF87270B0A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5910D27D-127A-47C0-8C75-C0ECD7531C72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5910D27D-127A-47C0-8C75-C0ECD7531C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5910D27D-127A-47C0-8C75-C0ECD7531C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5910D27D-127A-47C0-8C75-C0ECD7531C72}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D78C8BEE-C2CE-4D81-A57C-28F8E1B92B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D78C8BEE-C2CE-4D81-A57C-28F8E1B92B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D78C8BEE-C2CE-4D81-A57C-28F8E1B92B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D78C8BEE-C2CE-4D81-A57C-28F8E1B92B68}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4FBB72C5-304A-4E15-82E3-38FDCD2F9F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4FBB72C5-304A-4E15-82E3-38FDCD2F9F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FBB72C5-304A-4E15-82E3-38FDCD2F9F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
