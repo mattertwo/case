@@ -40,8 +40,10 @@ public static class ServiceCollectionExtensions
             configurator.Configure(options, connectionString);
         });
         
-        // Register other repositories here, e.g.,
+        services.AddScoped<IClientRepository, ClientRepository>();
         services.AddScoped<IMatterRepository, MatterRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IWorkTypeRepository, WorkTypeRepository>();
 

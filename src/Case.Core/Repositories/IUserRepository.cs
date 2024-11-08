@@ -4,7 +4,9 @@ namespace Case.Core.Repositories;
 
 public interface IUserRepository
 {
-    Task<List<User>> GetAllAsync();
-    Task<User> GetUserByIdAsync(string id);
-    Task CreateUserAsync(User user);
+    Task<User?> GetUserByIdAsync(Guid userId);
+    Task<User?> GetUserByEmailAsync(string email);
+    Task<User?> GetUserWithCredentialsAsync(Guid userId);
+    Task AddUserAsync(User user);
+    Task UpdateUserAsync(User user);
 }

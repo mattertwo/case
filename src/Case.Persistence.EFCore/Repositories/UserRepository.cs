@@ -4,21 +4,28 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Case.Persistence.EFCore.Repositories;
 
-public class UserRepository(CaseDbContext dbContext) : IUserRepository
+public class UserRepository(CaseDbContext context) : IUserRepository
 {
-    public Task<List<User>> GetAllAsync()
+    public async Task<User?> GetUserByIdAsync(Guid userId) =>
+        await context.Users.FindAsync(userId);
+
+    public async Task<User?> GetUserByEmailAsync(string email) =>
+        await context.Users.FirstOrDefaultAsync(u => u.Email == email);
+
+    public async Task<User?> GetUserWithCredentialsAsync(Guid userId) =>
+        await context.Users
+            .Include(u => u.Credentials)
+            .FirstOrDefaultAsync(u => u.Id == userId);
+
+    public async Task AddUserAsync(User user)
     {
-        return dbContext.Users.ToListAsync();
-    }
-    
-    public async Task<User> GetUserByIdAsync(string id)
-    {
-        return await dbContext.Users.FindAsync(id);
+        context.Users.Add(user);
+        await context.SaveChangesAsync();
     }
 
-    public async Task CreateUserAsync(User user)
+    public async Task UpdateUserAsync(User user)
     {
-        dbContext.Users.Add(user);
-        await dbContext.SaveChangesAsync();
+        context.Users.Update(user);
+        await context.SaveChangesAsync();
     }
 }

@@ -5,6 +5,7 @@ public class UserCredential
     public int Id { get; set; }
     public Guid UserId { get; set; }
     public string AuthType { get; set; }
+    public bool Enabled { get; set; }
     public string? ProviderAccountId { get; set; }
     public string? ProviderEmail { get; set; }
     public string? AccessToken { get; set; }

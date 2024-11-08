@@ -7,17 +7,16 @@ namespace Case.Core.Services
     {
         public async Task<List<User>> GetAllAsync()
         {
-            return await userRepository.GetAllAsync();
+            return new List<User>();
         }
         
         public async Task<User> GetUserByIdAsync(string id)
         {
-            return await userRepository.GetUserByIdAsync(id);
+            return new User();
         }
 
         public async Task CreateUserAsync(User user)
         {
-            await userRepository.CreateUserAsync(user);
         }
     }
 }

@@ -21,6 +21,9 @@ public class UserCredentialConfiguration : IEntityTypeConfiguration<UserCredenti
         builder
             .Property(c => c.RefreshToken)
             .HasMaxLength(200);
+        builder
+            .Property(c => c.Enabled)
+            .HasDefaultValue(true);
         
         builder
             .HasOne(c => c.User)
