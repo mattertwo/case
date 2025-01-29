@@ -8,7 +8,6 @@ namespace Case.WebApi.Controllers;
 
 [ApiController]
 [Route("users")]
-[Authorize]
 public class UserController(IUserService userService) : ControllerBase
 {
     [HttpGet]
